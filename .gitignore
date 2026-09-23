@@ -1,0 +1,18 @@
+# Ignore large unneeded folders/files
+.kilo/
+*.zip
+
+# Ignore temp files from local script executions
+download_refs.py
+download_refs2.py
+.vscode/
+
+# LaTeX build temp files
+research-paper/paper/*.aux
+research-paper/paper/*.log
+research-paper/paper/*.out
+research-paper/paper/*.blg
+research-paper/paper/*.bbl
+research-paper/paper/*.fls
+research-paper/paper/*.fdb_latexmk
+research-paper/paper/*.synctex.gz

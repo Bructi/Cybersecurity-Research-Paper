@@ -1,0 +1,6 @@
+Metric_Category,Year_2020_Minutes,Year_2022_Minutes,Year_2024_Minutes,Year_2026_Frontier_Minutes,Source_Authority
+Vulnerability_to_Exploit_Window,10080,2880,180,15,ENISA Frontier AI Assessment (2026)
+Median_Intrusion_to_Exfiltration,5760,1440,210,72,ENISA / Mandiant / CrowdStrike Telemetry
+Automated_Phishing_Generation_Per_Campaign,120,45,8,0.5,ENISA ETL 2025 / Darkweb IQ
+SOC_Mean_Time_To_Detect_Traditional,2880,1440,720,480,Sophos / SANS SOC Survey
+SOC_Mean_Time_To_Detect_AI_Augmented,480,120,25,8,NIST Cyber AI Profile / Industry Benchmarks

@@ -1,0 +1,6 @@
+Vector_Name,Percentage_Share,AI_Integration_Rate_Percent,Primary_Impact_Mechanism,Source
+Phishing_and_Social_Engineering,59.8,81.4,LLM-personalized spearphishing / synthetic vishing,ENISA ETL 2025
+Vulnerability_Exploitation,21.3,42.0,Automated PoC generation and scanning,ENISA ETL 2025 / CISA
+Stolen_Valid_Credentials_IAB,11.2,35.0,Automated stealer-log parsing and credential stuffing,GRIT 2025 / Chainalysis
+Supply_Chain_and_Third_Party,5.4,28.5,Dependency injection / Slopsquatting / Model poisoning,Black Kite 2025 / ENISA
+Other_Vectors,2.3,12.0,Direct brute-force / Misconfigurations,ENISA ETL 2025
