@@ -1,0 +1,3 @@
+@echo off
+echo Starting the Intrusion Detection System UI...
+python app.py

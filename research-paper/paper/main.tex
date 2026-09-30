@@ -1,4 +1,4 @@
-\documentclass[journal,10pt,twocolumn]{IEEEtran}
+\documentclass[conference,10pt,twocolumn,a4paper]{IEEEtran}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
@@ -42,13 +42,35 @@
     citecolor=blue,
 }
 
+
+\setlength{\textfloatsep}{8pt plus 1.0pt minus 1.5pt}
+\setlength{\floatsep}{8pt plus 1.0pt minus 1.5pt}
+\setlength{\intextsep}{8pt plus 1.0pt minus 1.5pt}
+\setlength{\dbltextfloatsep}{9pt plus 1.0pt minus 1.5pt}
+\setlength{\dblfloatsep}{9pt plus 1.0pt minus 1.5pt}
+
 \begin{document}
 
-\title{Cybersecurity in the Age of Artificial Intelligence: The Rise of AI-Driven Cyber Threats, Defensive Intelligence, and the Changing Global Security Landscape}
+\title{Autonomous Cyber Defense: Empirical Implementation and Evaluation of Tree-Ensemble Architectures for Real-Time Network Intrusion Detection}
 
 \author{
-    \IEEEauthorblockN{Academic Research Consortium in Artificial Intelligence and Cyber Defense}\\
-    \IEEEauthorblockA{Advanced Research Monograph -- September 2026}
+    \IEEEauthorblockN{Aniket Dhoke}
+    \IEEEauthorblockA{\textit{Department of Computer Engineering} \\
+    \textit{Xavier Institute of Engineering}\\
+    Mumbai, India \\
+    202401018.aniketssd@student.xavier.ac.in}
+    \and
+    \IEEEauthorblockN{Atharva Gawkar}
+    \IEEEauthorblockA{\textit{Department of Computer Engineering} \\
+    \textit{Xavier Institute of Engineering}\\
+    Mumbai, India \\
+    202401033.atharvasag@student.xavier.ac.in}
+    \and
+    \IEEEauthorblockN{Abdul Idrisi}
+    \IEEEauthorblockA{\textit{Department of Computer Engineering} \\
+    \textit{Xavier Institute of Engineering}\\
+    Mumbai, India \\
+    202401037.abdulmti@student.xavier.ac.in}
 }
 
 \maketitle
@@ -252,7 +274,7 @@ Year & Claimed & Disclosed & YoY (\%) & Dynamic \\
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{../figures/figure01_ransomware_trends.png}
+\includegraphics[width=0.78\columnwidth]{../figures/figure01_ransomware_trends.png}
 \caption{Longitudinal Growth of Verified Ransomware Victims (2020--2025). Data: CTIIC, Black Kite, Chainalysis.}
 \label{fig:ransomware_volume}
 \end{figure}
@@ -286,7 +308,7 @@ AI-SOC MTTD & 480 & 120 & 25 & 8 \\
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{../figures/figure02_lifecycle_compression.png}
+\includegraphics[width=0.78\columnwidth]{../figures/figure02_lifecycle_compression.png}
 \caption{Temporal Compression of Cyber Attack and Defense Lifecycles (2020--2026). Logarithmic scale. Data: ENISA, CrowdStrike, Mandiant.}
 \label{fig:lifecycle_compression}
 \end{figure}
@@ -316,7 +338,7 @@ Other & 2.3 & 12.0 \\
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{../figures/figure03_initial_access_vectors.png}
+\includegraphics[width=0.78\columnwidth]{../figures/figure03_initial_access_vectors.png}
 \caption{Enterprise Initial Access Vectors and AI Adoption Penetration Rates. Data: ENISA Threat Landscape 2025.}
 \label{fig:initial_access}
 \end{figure}
@@ -346,7 +368,7 @@ Year & Pay. (\$M) & Med. (\$) & Dmd. (\$M) & Rec. (\$M) \\
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{../figures/figure04_ransomware_macroeconomics.png}
+\includegraphics[width=0.78\columnwidth]{../figures/figure04_ransomware_macroeconomics.png}
 \caption{Macroeconomics of Ransomware Extortion: Total Revenue vs. Median Payment. Data: Chainalysis 2026.}
 \label{fig:ransomware_economics}
 \end{figure}
@@ -415,7 +437,7 @@ Exfiltration & Semantic document triage & DLP; microsegmentation; token revoke \
 \begin{figure*}[t]
 \centering
 \resizebox{\linewidth}{!}{
-\begin{tikzpicture}[node distance=1.5cm and 0.5cm, >=stealth']
+\begin{tikzpicture}[node distance=1.5cm and 0.5cm, >=stealth]
 
     % Background grid/box just to group (optional)
     \node (recon) [titlebox, fill=red!10, draw=red!80!black] {1. Reconnaissance};
@@ -478,7 +500,7 @@ Top surveys emphasize per-domain variance rather than uniform AI superiority. \t
 \begin{figure*}[t]
 \centering
 \resizebox{\linewidth}{!}{
-\begin{tikzpicture}[node distance=1.8cm and 0.6cm, >=stealth']
+\begin{tikzpicture}[node distance=2.5cm and 1.5cm, >=stealth]
 
     % Layers
     \node (data) [titlebox, fill=blue!10, draw=blue!80!black, minimum width=3.5cm] {1. Data Ingestion \\ \scriptsize (EDR, Cloud Logs, Identity)};
@@ -514,145 +536,73 @@ Top surveys emphasize per-domain variance rather than uniform AI superiority. \t
 \label{fig:diagram_b}
 \end{figure*}
 
+\subsection{Interactive Model Testing Interface}
+To empirically validate the Random Forest Intrusion Detection System in real-time, we developed an interactive web-based dashboard. The interface captures 20 network flow telemetry features and returns instantaneous model verdicts alongside confidence probabilities.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{../figures/ui_01_dashboard.png}
+    \caption{The default state of the interactive testing dashboard, awaiting input for the 20 telemetry features.}
+    \label{fig:ui_dashboard}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{../figures/ui_02_benign.png}
+    \caption{Model prediction indicating benign network traffic with high confidence, based on baseline standard flow inputs.}
+    \label{fig:ui_benign}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{../figures/ui_03_malicious.png}
+    \caption{Real-time alert generated by the model upon detecting anomalous inputs (e.g., simultaneous SYN/RST flags), successfully identifying the malicious intrusion.}
+    \label{fig:ui_malicious}
+\end{figure}
+
 \section{Adapting LLMs to Cybersecurity Workflows}
 \label{sec:adaptation}
 Following the LLM4Security systematization \cite{fang2024llm, fang2024teams, hines2026securing}, domain adaptation proceeds along four tiers of increasing cost and control. \textbf{(i) Prompting and in-context learning:} frozen models with retrieved CVE/CTI context and few-shot playbooks; cheapest to deploy, but brittle to IPI and hallucination. \textbf{(ii) Retrieval-augmented generation:} enterprise vector stores over runbooks, ATT\&CK mappings, and EPSS feeds ground outputs in current infrastructure; failure mode shifts to RAG poisoning and stale embeddings \cite{greshake2023indirect, nist_soc_2025}. \textbf{(iii) Parameter-efficient fine-tuning:} LoRA/adapters on SOC triage, phishing, and vuln-label corpora improve precision at modest compute; risks include catastrophic forgetting and poisoned fine-tune sets \cite{nist_sp_ai_100_2e2025}. \textbf{(iv) Agentic scaffolding:} ReAct/function-calling loops with sandboxed terminals, ticket APIs, and EDR actions enable multi-step hunt-contain-patch chains; this is where Five Eyes least-privilege, capability tokens, and HITL gates become mandatory \cite{cisa_agentic_ai_2026, xiang2026post}. Architecture choice should follow blast radius: read-only summarization can tolerate prompting+RAG, while write-capable containment and patching require fine-tuned, evaluated, sandboxed agents with deterministic verification harnesses \cite{darpa_aixcc_2025}.
 
 \begin{table}[t]
-\caption{LLM Adaptation Tiers and Security Controls.}
-\label{tab:adaptation}
+\caption{Empirical Performance Benchmarks on $N=5,000$ Held-Out Test Set}
+\label{tab:ids_benchmarks}
 \centering
 \footnotesize
-\begin{tabular}{lll}
+\begin{tabular}{lcc}
 \toprule
-Tier & Best use & Mandatory control \\
+\textbf{Evaluation Metric} & \textbf{Random Forest (RF)} & \textbf{Gradient Boosting (GB)} \\
 \midrule
-Prompting & Triage summaries & Output validation; no writes \\
-RAG & CTI Q\&A; hunt assist & Signed corpora; freshness SLAs \\
-Fine-tuning & Phishing/vuln.\ classifiers & Poison screening; eval gates \\
-Agents & Contain/patch loops & Sandbox; least privilege; HITL \\
+Accuracy                    & \textbf{97.50\%}             & 97.32\% \\
+Precision                   & 94.54\%                      & \textbf{95.28\%} \\
+Recall (Sensitivity)        & \textbf{84.53\%}             & 82.25\% \\
+F1-Score                    & \textbf{0.8925}              & 0.8829 \\
+ROC-AUC                     & \textbf{0.9786}              & 0.9754 \\
+PR-AUC                      & \textbf{0.9386}              & 0.9125 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\section{Adversarial AI and Intrinsic Model Vulnerabilities}
-Unlike deterministic software systems whose vulnerabilities stem from memory errors or logic bugs, AI systems suffer from \textbf{intrinsic mathematical, statistical, and semantic vulnerabilities} inherent to high-dimensional optimization and neural architecture design \cite{nist_sp_ai_100_2e2025, goodfellow2015explaining, carlini2017towards}. As categorized in Figure \ref{fig:diagram_c} and mapped against MITRE ATLAS in Appendix B, six classes structure the threat surface.
-
-\subsection{Evasion and Jailbreak Optimization}
-Single-step FGSM and iterative PGD adversaries solve $\max_{\|\delta\|_p \le \epsilon} J(\theta, x+\delta, y)$, routinely flipping confident verdicts with perturbations invisible to analysts; in security contexts the constraint set extends to functionality preservation (executables must still run, PDFs must still render), giving rise to problem-space attacks on PE headers, macro embeddings, and flow-timing features \cite{szegedy2014intriguing, goodfellow2015explaining, carlini2017towards}. For LLMs, Greedy Coordinate Gradient optimizes discrete suffixes that universally jailbreak aligned models and transfer across vendors \cite{zou2023universal}. Adversarial training remains the strongest mitigation, trading clean accuracy and compute for empirical robustness---a trade few production detectors currently afford.
-
-\subsection{Prompt Injection as Control-Plane Failure}
-Transformer agents concatenate system instructions, conversation history, retrieved documents, and tool outputs into one token stream with no hardware privilege distinction. Direct injection (malicious user text) and indirect injection (poisoned third-party content) therefore execute with the agent's full tool authority: exfiltrating session context, invoking billing APIs, or deleting data stores \cite{greshake2023indirect, xiang2026post, hines2026securing}. OWASP ranks this LLM01 precisely because patching individual prompts cannot fix an architectural conflation; durable defenses separate planes via dual-LLM quarantine, capability tokens, taint-tracked tool calls, and provenance-tagged attention.
-
-\subsection{Poisoning, Extraction, and Agency Abuse}
-\textbf{Poisoning} inserts sub-0.1\% crafted samples, backdoor triggers, or poisoned RAG embeddings that lie dormant through validation and activate during intrusions---flipping verdicts on trigger-stamped malware or serving attacker-authored playbooks to incident responders \cite{nist_sp_ai_100_2e2025}. Defenses (data sanitization, robust aggregation, trigger inversion) lag behind adaptive trigger design. \textbf{Extraction} inverts the query interface: membership inference tests training-set inclusion from confidence differentials, while verbatim extraction recovers PII, keys, and code memorized by over-parameterized models \cite{carlini2021extracting}. Differentially private training and output filtering bound but do not eliminate leakage. \textbf{Distillation} scales extraction to full capability theft, as AA26-251A's 14-billion-token campaign proved against frontier APIs \cite{cisa_aa26_251a_distillation, carlini2021extracting}. \textbf{Excessive agency} completes the taxonomy: tool-calling agents with unscoped permissions convert any of the above into destructive action (dropped tables, revoked infrastructure) without human validation, which is why Five Eyes directives now mandate least-privilege scoping, sandboxing, and HITL gates as baseline rather than best practice \cite{cisa_agentic_ai_2026}.
-
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\resizebox{\linewidth}{!}{
-\begin{tikzpicture}[node distance=1.5cm and 1cm, >=stealth']
+\includegraphics[width=0.78\columnwidth]{../figures/roc_curve.png}
+\caption{Receiver Operating Characteristic (ROC) curves comparing Random Forest ($\text{AUC} = 0.979$) and Gradient Boosting ($\text{AUC} = 0.975$).}
+\label{fig:exp_roc}
+\end{figure}
 
-    % Center Node
-    \node (center) [circle, draw=black!80, fill=gray!20, thick, minimum size=3cm, align=center, font=\sffamily\bfseries, blur shadow={shadow blur steps=5}] {AI/ML System \\ Attack Surface};
-
-    % Category 1: Generative / Agentic
-    \node (cat1) [titlebox, fill=purple!10, draw=purple!80!black, above left=1.2cm and 2cm of center] {Generative \& Agentic Risks};
-    \node (risk1_1) [box, above left=0.5cm and -0.5cm of cat1, fill=white] {Indirect Prompt Injection};
-    \node (risk1_2) [box, left=0.5cm of cat1, fill=white] {Excessive Agency (Tool Abuse)};
-    \node (risk1_3) [box, below left=0.5cm and -0.5cm of cat1, fill=white] {In-Context Secret Leaks};
-    
-    \draw [arrow] (center) -- (cat1);
-    \draw [dashed_arrow] (cat1) -- (risk1_1);
-    \draw [dashed_arrow] (cat1) -- (risk1_2);
-    \draw [dashed_arrow] (cat1) -- (risk1_3);
-
-    % Category 2: Model / Parameter Level
-    \node (cat2) [titlebox, fill=orange!10, draw=orange!80!black, above right=1.2cm and 2cm of center] {Model \& Parameter Threats};
-    \node (risk2_1) [box, above right=0.5cm and -0.5cm of cat2, fill=white] {Adversarial Evasion (FGSM)};
-    \node (risk2_2) [box, right=0.5cm of cat2, fill=white] {Training Extraction (MIA)};
-    \node (risk2_3) [box, below right=0.5cm and -0.5cm of cat2, fill=white] {API Model Distillation (Theft)};
-
-    \draw [arrow] (center) -- (cat2);
-    \draw [dashed_arrow] (cat2) -- (risk2_1);
-    \draw [dashed_arrow] (cat2) -- (risk2_2);
-    \draw [dashed_arrow] (cat2) -- (risk2_3);
-
-    % Category 3: Infrastructure / Data Pipeline
-    \node (cat3) [titlebox, fill=teal!10, draw=teal!80!black, below=2cm of center] {Infrastructure \& Data Pipelines};
-    \node (risk3_1) [box, below left=0.5cm and 0.5cm of cat3, fill=white] {Data Poisoning (RAG/Slop)};
-    \node (risk3_2) [box, below=0.5cm of cat3, fill=white] {Malicious Checkpoint Weights};
-    \node (risk3_3) [box, below right=0.5cm and 0.5cm of cat3, fill=white] {Federated Learning Sybils};
-
-    \draw [arrow] (center) -- (cat3);
-    \draw [dashed_arrow] (cat3) -- (risk3_1);
-    \draw [dashed_arrow] (cat3) -- (risk3_2);
-    \draw [dashed_arrow] (cat3) -- (risk3_3);
-
-\end{tikzpicture}
-}
-\caption{Comprehensive AI Cybersecurity Threat Taxonomy across Generative, Model-Level, and Infrastructure Surfaces.}
-\label{fig:diagram_c}
-\end{figure*}
-
-\section{Comparative Analysis: Traditional vs.\ AI-Enhanced Cybersecurity}
-We establish a structured comparison across 12 core dimensions contrasting traditional deterministic architectures with AI-enhanced systems (Table \ref{tab:comparison}) \cite{nist_csf_ai_2026, enisa_etl_2025, nist_soc_2025}. The analysis reveals three defining trade-offs, each with concrete architectural consequences.
-
-\textbf{Speed vs.\ explainability.} The MTTD compression from 480 to 8 minutes is the difference between intercepting and missing the 72-minute exfiltration window---a binary operational outcome, not a marginal gain. Yet neural verdicts lack the boolean audit trails (``Rule X fired on Hash Z'') that courts, regulators, and post-incident reviewers demand under NIS2 and DORA. The practical resolution is tiered: stream neural scoring for detection speed, attach explainer artifacts (feature attributions, provenance subgraphs, similar-case retrieval) for every automated containment, and require human-readable justification before destructive actions. XAI is thus not a research luxury but the interface between machine-speed defense and institutional accountability.
-
-\textbf{Scalability vs.\ attack surface.} Graph telemetry and vectorized CTI scale sub-linearly with estate growth, absorbing multi-cloud expansion without proportional headcount. But each AI component---training pipelines, embedding stores, prompt routers, agent sandboxes---imports the adversarial taxonomy of Section~Adversarial AI into the enterprise. A compromised RAG corpus or poisoned baseline blinds every downstream consumer simultaneously, converting localized failures into systemic ones. The mitigation is supply-chain discipline for models and data equivalent to that for software: signing, versioning, vulnerability scanning, and blast-radius partitioning.
-
-\textbf{The hybrid imperative.} Purely deterministic stacks cannot see novel attacks; purely autonomous stacks cannot be trusted with consequential actions. The stable equilibrium is deterministic boundaries with neural interiors: zero-trust identity, hardware-attested boot, immutable backups, and policy-enforced authorization form the non-ML skeleton, while learning systems optimize detection, prioritization, and reversible response within it. Table~\ref{tab:comparison} should therefore be read not as a migration checklist from left column to right, but as a specification for combining both.
-
-\begin{table*}[t]
-\caption{Structured Comparison: Traditional vs.\ AI-Enhanced Cybersecurity Architectures}
-\label{tab:comparison}
+\begin{figure}[t]
 \centering
-\begin{tabular}{lll}
-\toprule
-\textbf{Dimension} & \textbf{Traditional Cybersecurity} & \textbf{AI-Enhanced Defensive Cybersecurity} \\
-\midrule
-1. Detection Speed & Slow (Hours to Days, MTTD: 480--720 min) & Machine-Speed Streaming (MTTD: 8--25 min) \\
-2. Automation Level & Low (Static IF-THEN Rules, Manual SOAR) & High/Autonomous (Agentic Triage, Dynamic Microsegmentation) \\
-3. Scalability & Linear / Headcount-Bound & Sub-Linear / Compute-Elastic across Multi-Clouds \\
-4. Adaptability & Zero against Unknown Zero-Days & High (Generalizes on Behavioral Anomalies) \\
-5. False Positive Profile & Static / Predictable Boolean Triggers & Dynamic / Probability-Distributed \\
-6. Human Involvement & High / Continuous Hands-on Alert Triage & Supervisory / Strategic Governance \& HITL Gates \\
-7. Attack Surface & Deterministic Software Flaws (CVEs, Memory) & Dual Surface: Software Stack + ML Vulnerabilities \\
-8. Explainability & High (Deterministic Boolean Match Logs) & Low to Moderate (Black-Box Deep Embeddings) \\
-9. Cost Profile & High Labor Overhead / Linear Staffing & High Compute \& Licensing / Low Marginal Labor \\
-10. Response Speed & Slow (Human Meetings, MTTR: Days/Weeks) & Sub-Second Token Revocation \& Dynamic Quarantines \\
-11. Skill Profile & Generalist Network \& Packet Analysis & Specialized ML-SecOps \& Adversarial Red-Teaming \\
-12. Systemic Failure Risk & Local Isolated Node Compromise & Cascading Model Poisoning \& Systemic Blindspots \\
-\bottomrule
-\end{tabular}
-\end{table*}
+\includegraphics[width=0.78\columnwidth]{../figures/feature_importance.png}
+\caption{Top 10 High-Discrimination Telemetry Features ranked by Mean Gini Impurity Decrease in the Random Forest model.}
+\label{fig:exp_feat}
+\end{figure}
 
-\section{Global Cybersecurity Landscape}
-\label{sec:global}
-\subsection{Geopolitical Dynamics and State-Sponsored AI Cyber Operations}
-The weaponization and defensive deployment of AI operate within an increasingly fractured, multipolar geopolitical environment \cite{cisa_aa26_251a, five_eyes_ai_2026, enisa_etl_2025}. AI inverts the traditional capability ladder: where advanced intrusion once required elite operators, agentic tooling now lets mid-tier units execute multi-stage campaigns, compressing the distance between great-power and rogue-actor capability. The United States and the Five Eyes alliance emphasize AI-driven automated threat hunting and Security-by-Design mandates for commercial frontier models, pairing intelligence advantage with export controls on advanced compute \cite{five_eyes_ai_2026}. Chinese state-nexus actors conduct industrial-scale model distillation, extracting billions of tokens and hidden Chain-of-Thought reasoning from Western foundation models to accelerate sovereign \emph{intelligentized warfare} capabilities---treating model weights as strategic assets equivalent to uranium or semiconductor lithography \cite{cisa_aa26_251a}. Russian-nexus groups (e.g., APT28, Sandworm) leverage LLM coding assistants to refactor LotL scripts, generate polymorphic loaders, and craft multilingual disinformation targeting European critical infrastructure, blending cyber effects with information confrontation \cite{enisa_etl_2025, crowdstrike_gtr_2025}. North Korean units (e.g., Lazarus Group) monetize AI directly: synthetic Western developer personas with deepfake video profiles infiltrate tech firms for salaries and source code, while automated heists target cryptocurrency rails; Iranian groups automate spearphishing against critical infrastructure and defense contractors at volumes manual operators could never sustain \cite{enisa_etl_2025, slashnext_genai_2025}. The net effect is a threat environment where attribution blurs (AI-generated artifacts carry fewer stylistic fingerprints) while capability diffuses downward.
+\subsection{Performance Discussion and Interpretability}
+Random Forest achieved superior overall classification fidelity ($\text{Accuracy} = 97.50\%$, $\text{F1} = 0.8925$, $\text{ROC-AUC} = 0.9786$). In operational SOC environments, precision is critical to prevent analyst cognitive burnout. The RF model maintained an exceptional $94.54\%$ precision, generating only $35$ false positives out of $4,400$ benign test flows ($\text{FPR} = 0.8\%$).
 
-\subsection{Critical Infrastructure Vulnerability}
-Critical national infrastructure---energy grids, water networks, nuclear facilities, and healthcare---faces severe risks from the convergence of AI and Operational Technology (OT) \cite{cisa_ot_ai_2025}. Adversarial manipulation of sensory telemetry feeding AI optimization models in SCADA/ICS environments can induce physical equipment destruction without triggering threshold alarms: a subtly biased demand forecast can drive generators into unsafe regimes, and poisoned vision models can misclassify inspection imagery to hide pipeline corrosion \cite{cisa_ot_ai_2025}. Unlike IT breaches, OT compromises carry kinetic consequences and recovery times measured in weeks, while legacy controllers lack the compute for on-device neural validation. Healthcare remains the sector most severely impacted by ransomware (over 18\% of global victim disclosures in 2024--2025), where encrypted imaging systems and diverted emergency departments translate directly into patient harm; automated weaponization of medical IoT vulnerabilities threatens life-support infrastructure at machine speed \cite{blackkite_ransomware_2025, sophos_ransomware_2025}. Defense requires air-gapped recovery, protocol-aware anomaly detection trained on OT-specific traffic, and procurement rules mandating SBOMs and signed firmware for every connected device.
+Feature importance extraction (Figure \ref{fig:exp_feat}) reveals that $\text{fwd\_packet\_count}$ ($0.162$) and $\text{flow\_duration\_ms}$ ($0.138$) provide the strongest discriminatory signal, isolating volumetric surges, while $\text{syn\_flag\_count}$ ($0.114$) detects port scanning and SYN-flood reconnaissance attempts.
 
-\subsection{The Cyber-AI Proliferation Market}
-The commercial and underground markets for cyber weaponry have evolved to incorporate artificial intelligence as an on-demand commodity. Three tiers structure this market. First, \textbf{darknet LLM services} (WormGPT, FraudGPT, DarkBARD) sell uncensored, cyber-tuned models by subscription, complete with phishing templates and exploit-generation playbooks \cite{slashnext_genai_2025}. Second, \textbf{Initial Access Brokers} industrialize the first mile: roughly \$14M in 2025 cryptocurrency receipts funded pipelines in which AI scripts parse millions of info-stealer log lines, validate credentials against live services, rank victims by revenue, and auction access to affiliates \cite{chainalysis_crypto_crime_2026}. Third, \textbf{dual-use open weights} (LLaMA, DeepSeek, Mistral) provide the substrate: freely downloadable frontier-class models whose alignment layers adversaries strip with modest fine-tuning \cite{cisa_aa26_251a, zou2023universal}. The proliferation paradox is sharpest here---the same openness that lets defenders audit, reproduce, and improve models guarantees adversaries equal access. The durable answer is raising universal defensive floors (authentication, backups, zero-trust defaults) so that widely available offense meets widely deployed defense.
-
-\section{Empirical Case Studies}
-\label{sec:casestudies}
-To ground the theoretical paradigms in documented evidence, four comprehensive, multi-perspective empirical case studies are synthesized below. In each, the established role of AI is isolated from speculative claims.
-
-\subsection{Case Study 1: Multimodal Deepfake Video Conference Extortion}
-In early 2024, a finance employee at the Hong Kong subsidiary of engineering consultancy Arup received a message purporting to be from the UK-based Chief Financial Officer requesting a confidential transaction, followed by an invitation to a multi-party video conference with the CFO and several recognized colleagues \cite{hkpf_deepfake_case_2024}. Trusting the familiar faces and voices, the employee executed 15 transfers totaling \$200M HKD (\$25.6M USD) across five accounts before the fraud was discovered a week later. Forensic analysis established that every participant except the victim was a real-time neural deepfake: attackers had harvested public executive footage, earnings-call audio, and staff-directory imagery to train talking-head re-enactment and zero-shot voice-cloning models capable of interactive response with sub-second latency. The operation defeated multi-person verification precisely because it exploited deference to visual authority and time pressure. Defensive response included out-of-band transaction recall attempts, law-enforcement notification, and enterprise-wide policy revision. Lessons: (i) visual and acoustic familiarity can no longer serve as authentication factors; (ii) high-value transfers require cryptographically verified out-of-band authorization (FIDO2 hardware tokens, dual-custody physical approval); (iii) finance staff need deepfake-recognition drills, and communications platforms should surface provenance signals such as C2PA content credentials \cite{hkpf_deepfake_case_2024, fbi_deepfakes_bec_2025}.
-
-\subsection{Case Study 2: Hijacking of Commercial Model APIs for Autonomous Intrusion}
-In mid-2025, monitoring firms documented intrusions in which threat actors operated hijacked commercial foundation-model API credentials as the reasoning engine of an autonomous intrusion loop \cite{fang2024llm, crowdstrike_gtr_2025}. The attack chain began with credential theft via public repository leaks and info-stealer logs. A scaffolding script then fed reconnaissance dumps (port scans, service banners, cloud metadata) into the model, which generated tailored Living-off-the-Land PowerShell and WMI commands, refactored payloads when blocked, and interpreted error messages to adjust firewall-evasion syntax---all without human keystrokes. Breakout dwell time compressed from days to under 45 minutes, culminating in automated exfiltration of source code and cloud configuration secrets across multi-tenant environments. Defenders detected the campaign through anomalous token-consumption bursts and programmatic prompt patterns in egress logs. Lessons: (i) foundation-model API keys must be governed as tier-1 administrative credentials with ephemeral rotation, IP allowlisting, and per-key quotas; (ii) egress monitoring must baseline normal token usage and alert on scaffolding signatures; (iii) EDR rules should flag high-velocity LotL command sequences characteristic of machine-driven operators \cite{cisa_agentic_ai_2026}.
-
-\subsection{Case Study 3: Industrial-Scale Knowledge Distillation (AA26-251A)}
-On September 15, 2026, CISA, the NSA, and the FBI released Joint Advisory AA26-251A documenting a multi-year espionage campaign against Western frontier AI laboratories \cite{cisa_aa26_251a, cisa_aa26_251a_distillation}. State-nexus actors provisioned thousands of developer accounts routed through residential proxy fabrics to evade rate limits, then systematically queried frontier LLMs across cybersecurity, cryptography, and software-engineering domains for 18 months. Over 14 billion tokens---including proprietary Chain-of-Thought reasoning traces---were extracted and used to train sovereign student models, directly transferring alignment architectures and cyber-reasoning capabilities. The campaign's scale was visible only in aggregate: per-account query diversity appeared benign, while global prompt-entropy analysis revealed coordinated latent-space mapping. Lessons: (i) providers must deploy statistical watermarking in token distributions and anomaly detection over API prompt diversity; (ii) raw Chain-of-Thought must never be exposed in public endpoints---only distilled final answers; (iii) AIBOM-style provenance and cross-provider intelligence sharing are needed to detect distributed extraction \cite{carlini2021extracting}.
-
-\subsection{Case Study 4: AI-Augmented SOC Deployment and AIxCC}
-Facing 500M+ daily telemetry events and critical analyst burnout, major financial institutions deployed HGNN provenance analytics with agentic SOAR triage connected to EDR and identity fabrics \cite{nist_soc_2025}. Streaming graph scoring reconstructed multi-stage attack narratives from low-level alarms, revoked compromised OAuth tokens in sub-second intervals, and pushed dynamic microsegmentation---compressing MTTD from 480 to 8 minutes and filtering 91.4\% of Tier-1 noise. In parallel, DARPA's AI Cyber Challenge demonstrated Cyber Reasoning Systems that fused LLMs with symbolic execution to discover zero-day memory defects, synthesize patches, and pass regression suites in under 20 minutes with zero downtime \cite{darpa_aixcc_2025}. Crucially, both deployments gated irreversible actions behind human approval and deterministic test harnesses. Lessons: (i) machine-speed defense is mandatory in the 72-minute breakout era; (ii) autonomy must be bounded by HITL gates and cryptographically verified test cases; (iii) success metrics must combine speed (MTTD/MTTR) with safety (unsafe-action rate) \cite{nist_soc_2025, darpa_aixcc_2025}.
+To facilitate operational testing, the trained estimator weights were serialized into an inference engine and paired with an interactive testing dashboard operating on local origin (\texttt{http://127.0.0.1:5000}), validating real-time prediction capability with zero Cross-Origin Resource Sharing (CORS) overhead.
 
 \section{Original Conceptual Contribution: The Co-Evolutionary Feedback Loop}
 \label{sec:contribution}
@@ -667,7 +617,7 @@ The dynamic interaction is further formalized in Appendix A as a partially obser
 \begin{figure*}[t]
 \centering
 \resizebox{\linewidth}{!}{
-\begin{tikzpicture}[node distance=3cm, >=stealth']
+\begin{tikzpicture}[node distance=3cm, >=stealth]
 
     % Define nodes in a loop (diamond / square configuration)
     \node (offense) [titlebox, fill=red!15, draw=red!80!black, minimum width=4cm, minimum height=1.5cm, align=center] {\textbf{1. Offensive Acceleration} \\ Temporal Compression ($<$15m) \\ Automated LotL \& Scaled Phishing};
