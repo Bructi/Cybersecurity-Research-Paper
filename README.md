@@ -1,7 +1,8 @@
 <div align="center">
 
 # 🛡️ Cybersecurity in the Age of Artificial Intelligence
-### *A Comprehensive Survey of Threat Landscape Evolution, Defensive Telemetry Architectures, and Co-Evolutionary Dynamics*
+
+### _A Comprehensive Survey of Threat Landscape Evolution, Defensive Telemetry Architectures, and Co-Evolutionary Dynamics_
 
 [![Format: IEEEtran](https://img.shields.io/badge/Format-IEEEtran_Conference-blue.svg?style=for-the-badge&logo=latex)](research-paper/paper/main.tex)
 [![Pages: 24](https://img.shields.io/badge/Pages-24-success.svg?style=for-the-badge)](research-paper.pdf)
@@ -9,10 +10,10 @@
 [![Plagiarism](https://img.shields.io/badge/Plagiarism-0.00%25_Verified-brightgreen.svg?style=for-the-badge)]()
 
 **Authors:** Prof. Kavita Jain, Aniket Dhoke, Atharva Gawkar, Abdul Idrisi  
-*Department of Computer Engineering, Xavier Institute of Engineering, Mumbai, India*  
-Contact: `kavita.j@xavier.ac.in` | `{202401018.aniketssd, 202401033.atharvasag, 202401037.abdulmti}@student.xavier.ac.in`
+_Department of Computer Engineering, Xavier Institute of Engineering, Mumbai, India_  
+Contact: `{202401018.aniketssd, 202401033.atharvasag, 202401037.abdulmti}@student.xavier.ac.in`
 
-*A 24-page camera-ready IEEEtran academic research monograph exploring the dual-use dynamics of modern AI in global cyberspace.*
+_A 24-page camera-ready IEEEtran academic research monograph exploring the dual-use dynamics of modern AI in global cyberspace._
 
 [**Read the Full Paper (PDF) 📄**](research-paper.pdf)
 
@@ -22,7 +23,7 @@ Contact: `kavita.j@xavier.ac.in` | `{202401018.aniketssd, 202401033.atharvasag, 
 
 ## 🌟 Executive Overview
 
-The convergence of artificial intelligence (AI) with global cyberspace has initiated a profound paradigm shift in information security. This repository houses the **source code, quantitative datasets, high-definition TikZ diagrams**, telemetry architecture taxonomies, and the final mathematical output for an extensive academic research monograph. 
+The convergence of artificial intelligence (AI) with global cyberspace has initiated a profound paradigm shift in information security. This repository houses the **source code, quantitative datasets, high-definition TikZ diagrams**, telemetry architecture taxonomies, and the final mathematical output for an extensive academic research monograph.
 
 We evaluate how foundation models, automated reasoning agents, and generative synthetic media (deepfakes) are actively transforming offensive exploitation vectors, while simultaneously pushing defensive security capabilities to machine speeds.
 
@@ -32,19 +33,21 @@ We evaluate how foundation models, automated reasoning agents, and generative sy
 
 ## 🚀 Key Contributions & Findings
 
-| Metric / Finding | Data Shift | Strategic Impact |
-| :--- | :--- | :--- |
-| **💥 Vulnerability Weaponization** | `10,080 min` ➜ `<15 min` | Manual patch cycles are universally obsolete in the 72-minute breakout era. |
-| **🏃 Adversary Breakout Time** | `5,760 min` ➜ `72 min` | Autonomous, multi-step agents systematically bypass human triage. |
-| **🤖 AI-Lure Penetration** | **81.4%** of campaigns | Legacy grammatical & style-based phishing filters decisively fail. |
-| **🛡️ AI-SOC Triage (MTTD)** | `480 min` ➜ `8 min` | Graph-neural networks restore operational latency parity for defenders. |
-| **⚡ Telemetry Analytics** | **Architectural Synthesis** | Systematic evaluation of 5 IDS paradigms across benchmark suites (CIC-IDS, UNSW-NB15, Kitsune) under EU AI Act Art. 13 and wire-rate constraints. |
-| **⏱️ Standard Defensive Hours** | **42.6 SDH** analytical model | Analytical model for displacement of Tier-1 alert noise while preserving a 64-minute containment buffer. |
+| Metric / Finding                   | Data Shift                    | Strategic Impact                                                                                                                                  |
+| :--------------------------------- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **💥 Vulnerability Weaponization** | `10,080 min` ➜ `<15 min`      | Manual patch cycles are universally obsolete in the 72-minute breakout era.                                                                       |
+| **🏃 Adversary Breakout Time**     | `5,760 min` ➜ `72 min`        | Autonomous, multi-step agents systematically bypass human triage.                                                                                 |
+| **🤖 AI-Lure Penetration**         | **81.4%** of campaigns        | Legacy grammatical & style-based phishing filters decisively fail.                                                                                |
+| **🛡️ AI-SOC Triage (MTTD)**        | `480 min` ➜ `8 min`           | Graph-neural networks restore operational latency parity for defenders.                                                                           |
+| **⚡ Telemetry Analytics**         | **Architectural Synthesis**   | Systematic evaluation of 5 IDS paradigms across benchmark suites (CIC-IDS, UNSW-NB15, Kitsune) under EU AI Act Art. 13 and wire-rate constraints. |
+| **⏱️ Standard Defensive Hours**    | **42.6 SDH** analytical model | Analytical model for displacement of Tier-1 alert noise while preserving a 64-minute containment buffer.                                          |
 
 ---
 
 ## 💻 Data Preservation & Verification Harness
+
 This research includes deterministic verification pipelines and data preservation tools:
+
 - Automated PDF verification script (`scripts/verify_pdf.py`) ensuring zero compilation errors, zero warnings, zero overfull hboxes, and clean page counts.
 - Reproducible Python visualization pipelines generating publication-grade vector graphics across longitudinal ransomware volumes, attack lifecycle compression, initial access vectors, and extortion macroeconomics.
 
@@ -60,7 +63,7 @@ Everything required to verify, reproduce, and compile this research is rigorousl
  ┣ 📂 ref-papers/                    <-- 📚 Top 10 critical source PDFs (Goodfellow, Szegedy, Carlini, Fang, etc.)
  ┣ 📂 research-paper/
  ┃ ┣ 📂 paper/                       <-- 📝 LaTeX Source (main.tex) & BibTeX
- ┃ ┃ ┗ 📂 sections/                  <-- 🧩 18 modular markdown equivalents 
+ ┃ ┃ ┗ 📂 sections/                  <-- 🧩 18 modular markdown equivalents
  ┃ ┣ 📂 figures/                     <-- 📊 HD UI Screenshots & ML Charts
  ┃ ┃ ┗ 📂 data/                      <-- 📈 Verifiable CSV ground-truth datasets
  ┃ ┣ 📂 scripts/                     <-- 🐍 Plagiarism checker, UI app, automation scripts
@@ -75,7 +78,7 @@ Everything required to verify, reproduce, and compile this research is rigorousl
 
 ## 📐 Publication-Grade Features
 
-- **Native `TikZ` Vector Diagrams:** All overarching structural models within the LaTeX source are programmed natively in `TikZ` (zero generated raster images!) providing *infinite vector scaling, heavy-duty drop shadows, and flawless print typography*.
+- **Native `TikZ` Vector Diagrams:** All overarching structural models within the LaTeX source are programmed natively in `TikZ` (zero generated raster images!) providing _infinite vector scaling, heavy-duty drop shadows, and flawless print typography_.
 - **Verified References & Originality:** Achieved a perfect 0.00% verbatim overlap via local 7-gram verification against the corpus. Sourced exclusively from top-tier academic bodies.
 - **Mathematical Formulations:** Includes multi-line, mathematically aligned proofs and equations for Game-Theoretic Co-Evolution and Adversarial Evasion frameworks.
 
@@ -100,7 +103,7 @@ pdflatex -interaction=nonstopmode main.tex
 pdflatex -interaction=nonstopmode main.tex
 ```
 
-*(Alternatively, standard TeX container images like `localhost/latex-compiler` traversing via `podman`/`docker` work identically!)*
+_(Alternatively, standard TeX container images like `localhost/latex-compiler` traversing via `podman`/`docker` work identically!)_
 
 ---
 
