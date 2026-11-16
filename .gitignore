@@ -1,18 +1,43 @@
-# Ignore large unneeded folders/files
-.kilo/
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+venv/
+.env/
+
+# LaTeX build temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.bbl
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.lot
+*.lof
+
+# Temporary and preview files
+*preview.png
+template_extracted/
+test.zip
 *.zip
+download_refs*.py
 
-# Ignore temp files from local script executions
-download_refs.py
-download_refs2.py
+# OS and Editor artifacts
 .vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*~
 
-# LaTeX build temp files
-research-paper/paper/*.aux
-research-paper/paper/*.log
-research-paper/paper/*.out
-research-paper/paper/*.blg
-research-paper/paper/*.bbl
-research-paper/paper/*.fls
-research-paper/paper/*.fdb_latexmk
-research-paper/paper/*.synctex.gz
+# AI Harness and Local Agent cache
+.kilo/
+.claude/
+skills/

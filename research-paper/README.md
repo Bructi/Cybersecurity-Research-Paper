@@ -1,14 +1,18 @@
 <div align="center">
 
 # 🛡️ Cybersecurity in the Age of Artificial Intelligence
-### *The Rise of AI-Driven Cyber Threats, Defensive Intelligence, and the Changing Global Security Landscape*
+### *A Comprehensive Survey of Threat Landscape Evolution, Defensive Telemetry Architectures, and Co-Evolutionary Dynamics*
 
 [![Format: IEEEtran](https://img.shields.io/badge/Format-IEEEtran_Conference-blue.svg?style=for-the-badge&logo=latex)](paper/main.tex)
-[![Pages: 21](https://img.shields.io/badge/Pages-21-success.svg?style=for-the-badge)](research-paper.pdf)
+[![Pages: 24](https://img.shields.io/badge/Pages-24-success.svg?style=for-the-badge)](research-paper.pdf)
 [![Status: Final](https://img.shields.io/badge/Status-Final_Submission_Ready-orange.svg?style=for-the-badge)]()
 [![Plagiarism](https://img.shields.io/badge/Plagiarism-0.00%25_Verified-brightgreen.svg?style=for-the-badge)]()
 
-*A 21-page academic research monograph authored by Aniket Dhoke, Atharva Gawkar, and Abdul Idrisi exploring the dual-use dynamics of modern AI in global cyberspace.*
+**Authors:** Prof. Kavita Jain, Aniket Dhoke, Atharva Gawkar, Abdul Idrisi  
+*Department of Computer Engineering, Xavier Institute of Engineering, Mumbai, India*  
+Contact: `kavita.j@xavier.ac.in` | `{202401018.aniketssd, 202401033.atharvasag, 202401037.abdulmti}@student.xavier.ac.in`
+
+*A 24-page camera-ready IEEEtran academic research monograph exploring the dual-use dynamics of modern AI in global cyberspace.*
 
 [**Read the Full Paper (PDF) 📄**](research-paper.pdf)
 
@@ -18,7 +22,7 @@
 
 ## 🌟 Executive Overview
 
-The convergence of artificial intelligence (AI) with global cyberspace has initiated a profound paradigm shift in information security. This repository houses the **source code, quantitative datasets, high-definition TikZ diagrams**, a fully functional **Interactive IDS Dashboard**, and the final mathematical output for an extensive academic research project. 
+The convergence of artificial intelligence (AI) with global cyberspace has initiated a profound paradigm shift in information security. This repository houses the **source code, quantitative datasets, high-definition TikZ diagrams**, telemetry architecture taxonomies, and the final mathematical output for an extensive academic research monograph. 
 
 We evaluate how foundation models, automated reasoning agents, and generative synthetic media (deepfakes) are actively transforming offensive exploitation vectors, while simultaneously pushing defensive security capabilities to machine speeds.
 
@@ -31,16 +35,18 @@ We evaluate how foundation models, automated reasoning agents, and generative sy
 | Metric / Finding | Data Shift | Strategic Impact |
 | :--- | :--- | :--- |
 | **💥 Vulnerability Weaponization** | `10,080 min` ➜ `<15 min` | Manual patch cycles are universally obsolete in the 72-minute breakout era. |
-| **🏃♂️ Adversary Breakout Time** | `5,760 min` ➜ `72 min` | Autonomous, multi-step agents systematically bypass human triage. |
+| **🏃 Adversary Breakout Time** | `5,760 min` ➜ `72 min` | Autonomous, multi-step agents systematically bypass human triage. |
 | **🤖 AI-Lure Penetration** | **81.4%** of campaigns | Legacy grammatical & style-based phishing filters decisively fail. |
 | **🛡️ AI-SOC Triage (MTTD)** | `480 min` ➜ `8 min` | Graph-neural networks restore operational latency parity for defenders. |
+| **⚡ Telemetry Analytics** | **Architectural Synthesis** | Systematic evaluation of 5 IDS paradigms across benchmark suites (CIC-IDS, UNSW-NB15, Kitsune) under EU AI Act Art. 13 and wire-rate constraints. |
+| **⏱️ Standard Defensive Hours** | **42.6 SDH** analytical model | Analytical model for displacement of Tier-1 alert noise while preserving a 64-minute containment buffer. |
 
 ---
 
-## 💻 Interactive Model Testing UI
-This research includes a live web dashboard (`scripts/app.py`) built with Flask that tests the Random Forest Intrusion Detection model in real-time using 20 telemetry inputs. 
-- Fully integrated with HD screenshots in the final PDF for verifiable empirical results.
-- Demonstrates real-time evaluation of benign traffic and malicious anomalous payloads.
+## 💻 Data Preservation & Verification Harness
+This research includes deterministic verification pipelines and data preservation tools:
+- Automated PDF verification script (`scripts/verify_pdf.py`) ensuring zero compilation errors, zero warnings, zero overfull hboxes, and clean page counts.
+- Reproducible Python visualization pipelines generating publication-grade vector graphics across longitudinal ransomware volumes, attack lifecycle compression, initial access vectors, and extortion macroeconomics.
 
 ---
 
